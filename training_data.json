@@ -1,0 +1,652 @@
+[
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base prompt:\"Go to Room 1 and Pick Red Cube and Go to Room 2 and Place It\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Please move to room1, then pick up the red cube, next proceed to room2, and finally set it down.",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Navigate to room1 to retrieve the red cube, then advance to room2 and place the cube there.",
+    "output": "[\n  {\n    \"instruction\": \"Navigate to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"retrieve the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your task is to go to room1, grab the red cube, then head to room2, and deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"head to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate movement to room1, acquire the red cube, subsequently transfer to room2, and release the cube.",
+    "output": "[\n  {\n    \"instruction\": \"Initiate movement to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently transfer to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release the cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Can you access room1, take the red cube, proceed to room2, and then put it in place?",
+    "output": "[\n  {\n    \"instruction\": \"access room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, visit room1 and pick up the red cube; second, make your way to room2 to place it.",
+    "output": "[\n  {\n    \"instruction\": \"visit room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move to room1 to get the red cube, then travel to room2 and leave it there.",
+    "output": "[\n  {\n    \"instruction\": \"Move to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"get the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to enter room1, select the red cube, then go to room2, and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"enter room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"select the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Commence by going to room1 to seize the red cube, after which move to room2 for its placement.",
+    "output": "[\n  {\n    \"instruction\": \"Commence by going to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Find the red cube in room1, pick it up, go to room2, and place the cube there.",
+    "output": "[\n  {\n    \"instruction\": \"Find the red cube in room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick it up\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base prompt : \"Grab the Cube in Red Color from Room 3, Place it in Room 4, and Travel to Room 2\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Get the red cube from room3, then put it in room4, and finally go to room2.",
+    "output": "[\n  {\n    \"instruction\": \"Get the red cube from room3\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"put it in room4\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Please retrieve the cube in red from room3, place it into room4, and afterwards, navigate to room2.",
+    "output": "[\n  {\n    \"instruction\": \"retrieve the cube in red from room3\",\n    \"action\": \"pick\",\n    \"target\": \"cube in red\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"place it into room4\",\n    \"action\": \"place\",\n    \"target\": \"cube in red\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"navigate to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your task is to take the red-colored cube from room3, transfer it to room4, and then proceed to room2.",
+    "output": "[\n  {\n    \"instruction\": \"take the red-colored cube from room3\",\n    \"action\": \"pick\",\n    \"target\": \"red-colored cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"transfer it to room4\",\n    \"action\": \"place\",\n    \"target\": \"red-colored cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, pick up the red cube in room3; second, deposit it in room4; and third, travel to room2.",
+    "output": "[\n  {\n    \"instruction\": \"pick up the red cube in room3\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"deposit it in room4\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go to room3 to grab the red cube, move it to room4 for placement, and conclude by heading to room2.",
+    "output": "[\n  {\n    \"instruction\": \"Go to room3 to grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"move it to room4 for placement\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"conclude by heading to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Acquire the crimson cube from room3, set it down in room4, and then make your way to room2.",
+    "output": "[\n  {\n    \"instruction\": \"Acquire the crimson cube from room3\",\n    \"action\": \"pick\",\n    \"target\": \"crimson cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"set it down in room4\",\n    \"action\": \"place\",\n    \"target\": \"crimson cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "From room3, collect the cube that's red, bring it to room4 and place it, then proceed to room2.",
+    "output": "[\n  {\n    \"instruction\": \"From room3, collect the cube that's red\",\n    \"action\": \"pick\",\n    \"target\": \"cube that's red\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"bring it to room4 and place it\",\n    \"action\": \"place\",\n    \"target\": \"cube that's red\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to seize the red cube from room3, position it in room4, and subsequently go to room2.",
+    "output": "[\n  {\n    \"instruction\": \"seize the red cube from room3\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"position it in room4\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"subsequently go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Start by picking the red cube from room3, continue by placing it into room4, and finish by moving to room2.",
+    "output": "[\n  {\n    \"instruction\": \"picking the red cube from room3\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"placing it into room4\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"moving to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Grab the cube colored red from room3, place it into room4, and finally, move over to room2.",
+    "output": "[\n  {\n    \"instruction\": \"Grab the cube colored red from room3\",\n    \"action\": \"pick\",\n    \"target\": \"cube colored red\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"place it into room4\",\n    \"action\": \"place\",\n    \"target\": \"cube colored red\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"move over to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base prompt for \"Roll to Room 1 and Pick the Red Cube, Then Roll to Room 2 and Place It\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Proceed by rolling to room1, collect the red cube, then continue rolling to room2, and set it down.",
+    "output": "[\n  {\n    \"instruction\": \"Proceed by rolling to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"collect the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"continue rolling to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate a roll towards room1 to secure the red cube, then perform another roll to room2 and deposit the cube",
+    "output": "[\n  {\n    \"instruction\": \"Initiate a roll towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"perform another roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit the cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your directive is to roll into room1, grasp the red cube, subsequently roll to room2, and put it in position.",
+    "output": "[\n  {\n    \"instruction\": \"roll into room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grasp the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in position\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Execute a roll to room1 for the red cube pickup, after which, roll to room2 for its placement.",
+    "output": "[\n  {\n    \"instruction\": \"Execute a roll to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube pickup\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Roll to room1 and retrieve the red cube, then roll to room2 and leave the cube there.",
+    "output": "[\n  {\n    \"instruction\": \"Roll to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"retrieve the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave the cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move by rolling towards room1 to get the red cube, then roll towards room2 and release it.",
+    "output": "[\n  {\n    \"instruction\": \"Move by rolling towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"get the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1 via rolling motion, take possession of the red cube, then roll to room2 and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"Access room1 via rolling motion\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take possession of the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Begin by rolling to room1 to acquire the red cube, then advance with a roll to room2 for its final resting place.",
+    "output": "[\n  {\n    \"instruction\": \"Begin by rolling to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance with a roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its final resting place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Can you roll over to room1 to grab the red cube, and then roll to room2 to place it there?",
+    "output": "[\n  {\n    \"instruction\": \"roll over to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Perform a rolling movement to room1, pick the red cube, then roll directly to room2 and place it down.",
+    "output": "[\n  {\n    \"instruction\": \"Perform a rolling movement to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"roll directly to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Custom Prompts for \"Move to Room 1 Then Pick Up the Red Cube and Travel to Room 2 and Put It Down\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Proceed to room1, then take hold of the red cube, subsequently travel to room2, and finally set it in place.",
+    "output": "[\n  {\n    \"instruction\": \"Proceed to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take hold of the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your mission is to navigate to room1, collect the red cube, then advance to room2, and release the object.",
+    "output": "[\n  {\n    \"instruction\": \"navigate to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"collect the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release the object\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go into room1 and grasp the red cube, after which, journey to room2 and deposit it",
+    "output": "[\n  {\n    \"instruction\": \"Go into room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grasp the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"journey to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Please shift to room1, pick up the red cube, then continue onward to room2, and position it.",
+    "output": "[\n  {\n    \"instruction\": \"shift to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"continue onward to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"position it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Make your way to room1 to secure the red cube, then transition to room2 and lay it down.",
+    "output": "[\n  {\n    \"instruction\": \"Make your way to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"lay it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, move to room1 to retrieve the red cube; second, travel to room2 and leave it there.",
+    "output": "[\n  {\n    \"instruction\": \"move to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"retrieve the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1 to get the red cube, then proceed directly to room2, and place it",
+    "output": "[\n  {\n    \"instruction\": \"Access room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"get the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed directly to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly go to room1, select the red cube, then travel towards room2, and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"select the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate movement to room1, acquire the red cube, then transport it to room2 for its final setting",
+    "output": "[\n  {\n    \"instruction\": \"Initiate movement to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transport it to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its final setting\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Head to room1 to pick up the red cube, then make the trip to room2 and put it down",
+    "output": "[\n  {\n    \"instruction\": \"Head to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make the trip to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base prompt for \"Move Towards Room 1 and Pick Red Cube, Then Proceed to Room 2 and Put It There\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Advance to room1 and take the red cube, then move on to room2 and leave it in that location",
+    "output": "[\n  {\n    \"instruction\": \"Advance to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move on to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it in that location\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Begin by shifting towards room1 to secure the red cube, then continue to room2 and place the item.",
+    "output": "[\n  {\n    \"instruction\": \"Begin by shifting towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"continue to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the item\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Navigate in the direction of room1 for the red cube collection, afterwards make your way to room2 to set it down.",
+    "output": "[\n  {\n    \"instruction\": \"Navigate in the direction of room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube collection\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your next action is to move towards room1, grab the red cube, then proceed into room2 and deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"move towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed into room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Direct yourself towards room1 to acquire the red cube, subsequently continue to room2 and put it in position.",
+    "output": "[\n  {\n    \"instruction\": \"Direct yourself towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently continue to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in position\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Approach room1 to pick up the red cube, then transition to room2 and place it there.",
+    "output": "[\n  {\n    \"instruction\": \"Approach room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Make a move to room1 to get the red cube, then advance to room2 and put it in that spot.",
+    "output": "[\n  {\n    \"instruction\": \"Make a move to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"get the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in that spot\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly go in the direction of room1 to select the red cube, and then proceed to room2 for its placement.",
+    "output": "[\n  {\n    \"instruction\": \"go in the direction of room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"select the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I require you to move towards room1, apprehend the red cube, then travel to room2 and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"move towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"apprehend the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate your movement towards room1, seize the red cube, then continue your journey to room2 to settle it.",
+    "output": "[\n  {\n    \"instruction\": \"Initiate your movement towards room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"continue your journey to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base Prompts for \"Navigate to Room 1 and Grab the Red Cube, Move Towards Room 2 and Put It Down\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Direct your navigation to room1 to secure the red cube, then proceed in the direction of room2 and set it down",
+    "output": "[\n  {\n    \"instruction\": \"Direct your navigation to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed in the direction of room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your orders are to navigate to room1 to seize the red cube, then advance towards room2 and place it there",
+    "output": "[\n  {\n    \"instruction\": \"navigate to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1 and acquire the red cube, subsequently shift your movement towards room2 and release it",
+    "output": "[\n  {\n    \"instruction\": \"Access room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently shift your movement towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly navigate to room1 for the red cube pickup, then move towards room2 and deposit the item.",
+    "output": "[\n  {\n    \"instruction\": \"navigate to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube pickup\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit the item\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, navigate to room1 to get the red cube; second, move towards room2 and leave it in place",
+    "output": "[\n  {\n    \"instruction\": \"navigate to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"get the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Please initiate navigation to room1 to take the red cube, then transition towards room2 and put it in that spot",
+    "output": "[\n  {\n    \"instruction\": \"initiate navigation to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in that spot\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Find your way to room1 and grasp the red cube, after which, move towards room2 and settle it.",
+    "output": "[\n  {\n    \"instruction\": \"Find your way to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grasp the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Execute navigation to room1 to collect the red cube, then direct your movement towards room2 and position it",
+    "output": "[\n  {\n    \"instruction\": \"Execute navigation to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"collect the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"direct your movement towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"position it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go to room1 and apprehend the red cube, then proceed towards room2 and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"Go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"apprehend the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Navigate into room1 for the red cube, then make your way towards room2 to put it down.",
+    "output": "[\n  {\n    \"instruction\": \"Navigate into room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "ustom Prompts for \"Travel to Room 1 and Pickup the Red Cube and Move to Room 2 and Place the Red Cube\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Journey to room1 and retrieve the red cube, then relocate to room2 and position that red cube.",
+    "output": "[\n  {\n    \"instruction\": \"Journey to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"retrieve the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"relocate to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"position that red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your goal is to travel to room1, grab the red cube, then shift over to room2, and set the red cube down.",
+    "output": "[\n  {\n    \"instruction\": \"travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"shift over to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set the red cube down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate travel to room1 for the red cube pickup, subsequently transfer to room2 and release the red cube",
+    "output": "[\n  {\n    \"instruction\": \"Initiate travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube pickup\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"subsequently transfer to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly travel to room1 and collect the red cube, then proceed to room2 and place the red cube there.",
+    "output": "[\n  {\n    \"instruction\": \"travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"collect the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the red cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Make a trip to room1 to secure the red cube, then make your way to room2 and deposit the red cube",
+    "output": "[\n  {\n    \"instruction\": \"Make a trip to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"to secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go to room1 and obtain the red cube, after which move to room2 and settle the red cube",
+    "output": "[\n  {\n    \"instruction\": \"Go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"obtain the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1 by traveling to it, pick up the red cube, then move your unit to room2 and put the red cube in place.",
+    "output": "[\n  {\n    \"instruction\": \"Access room1 by traveling to it\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move your unit to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put the red cube in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, travel to room1 to seize the red cube; second, move to room2 to put the red cube down.",
+    "output": "[\n  {\n    \"instruction\": \"travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put the red cube down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Direct your travel to room1 to apprehend the red cube, then make a move to room2 and drop the red cube off.",
+    "output": "[\n  {\n    \"instruction\": \"Direct your travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"apprehend the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make a move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop the red cube off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to travel to room1 for the red cube, then move to room2 and leave the red cube there.",
+    "output": "[\n  {\n    \"instruction\": \"travel to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave the red cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base Prompts for \"Collect a Blue Cube from Room 1 and Go to Room 2 and Place It\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Retrieve the blue cube from room1, then head over to room2 and set it down.",
+    "output": "[\n  {\n    \"instruction\": \"Retrieve the blue cube from room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"head over to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your mission: gather the blue cube from room1, proceed to room2, and put it in position.",
+    "output": "[\n  {\n    \"instruction\": \"gather the blue cube from room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in position\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go to room1 and pick up the blue cube, then make your way to room2 to deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"Go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the blue cube\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Acquire the blue cube from room1, then travel to room2 and release the item",
+    "output": "[\n  {\n    \"instruction\": \"Acquire the blue cube from room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release the item\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Find the blue cube in room1 and take it, then access room2 and place it there",
+    "output": "[\n  {\n    \"instruction\": \"Find the blue cube in room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take it\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"access room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place it there\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, get the blue cube from room1; second, advance to room2 and leave it behind.",
+    "output": "[\n  {\n    \"instruction\": \"get the blue cube from room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it behind\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Collect the blue cube present in room1, then transition to room2 and put it in that spot.",
+    "output": "[\n  {\n    \"instruction\": \"Collect the blue cube present in room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in that spot\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move to room1 to secure the blue cube, then move towards room2 and drop it off",
+    "output": "[\n  {\n    \"instruction\": \"Move to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the blue cube\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move towards room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to grab the blue cube from room1, then move into room2 for its placement.",
+    "output": "[\n  {\n    \"instruction\": \"grab the blue cube from room1\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move into room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "From room1, pick up the blue cube, then journey to room2 and settle it there",
+    "output": "[\n  {\n    \"instruction\": \"From room1, pick up the blue cube\",\n    \"action\": \"pick\",\n    \"target\": \"blue cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"journey to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle it there\",\n    \"action\": \"place\",\n    \"target\": \"blue cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base Prompts for \"Go to Room 1, Pick Red Cube, Go to Room 2, Place It\"\n",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Proceed into room1 to collect the red cube, then advance into room2 to put it down.",
+    "output": "[\n  {\n    \"instruction\": \"Proceed into room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"collect the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance into room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your next steps are to enter room1, take the red cube, then move to room2, and set it there.",
+    "output": "[\n  {\n    \"instruction\": \"enter room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set it there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Direct your path to room1 and grab the red cube, then shift your position to room2 and deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"Direct your path to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"shift your position to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1, secure the red cube, then make your way to room2, and place the item.",
+    "output": "[\n  {\n    \"instruction\": \"Access room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the item\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go inside room1 for the red cube pickup, then transition to room2 for its final resting spot.",
+    "output": "[\n  {\n    \"instruction\": \"Go inside room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"for the red cube pickup\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"for its final resting spot\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly go to room1 and acquire the red cube, then travel to room2 and leave it in that location.",
+    "output": "[\n  {\n    \"instruction\": \"go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave it in that location\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate your movement to room1 to seize the red cube, then proceed to room2 and release it.",
+    "output": "[\n  {\n    \"instruction\": \"Initiate your movement to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Can you reach room1 to retrieve the red cube, then proceed to room2 and put it in place?",
+    "output": "[\n  {\n    \"instruction\": \"reach room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"retrieve the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put it in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move directly to room1, pick up the red cube, then go to room2, and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"Move directly to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to enter room1, select the red cube, then head into room2, and settle it.",
+    "output": "[\n  {\n    \"instruction\": \"enter room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"select the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"head into room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle it\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Base Prompts for \"Reach to Room 1, Lift the Red Cube, Proceed to Room 2, Place the Red Cube There\"",
+    "output": NaN
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Get to room1 and elevate the red cube, then advance to room2 and set that red cube down in position.",
+    "output": "[\n  {\n    \"instruction\": \"Get to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"elevate the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"advance to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"set that red cube down in position\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your next action is to arrive at room1, raise the red cube, then continue to room2 and deposit the red cube there.",
+    "output": "[\n  {\n    \"instruction\": \"arrive at room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"raise the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"continue to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"deposit the red cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Access room1 and pick up the red cube, then make your way into room2 and place the red cube in that spot",
+    "output": "[\n  {\n    \"instruction\": \"Access room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way into room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the red cube in that spot\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Go to room1, seize the red cube, then proceed directly to room2 and put the red cube in place.",
+    "output": "[\n  {\n    \"instruction\": \"Go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"seize the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed directly to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"put the red cube in place\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move yourself to room1 to secure the red cube, after which, travel to room2 and release the red cube.",
+    "output": "[\n  {\n    \"instruction\": \"Move yourself to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"secure the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"travel to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"release the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Kindly reach room1, grab the red cube, then transition to room2 and leave the red cube there.",
+    "output": "[\n  {\n    \"instruction\": \"reach room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"grab the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"transition to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"leave the red cube there\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate movement to room1, acquire the red cube, then journey to room2 and settle the red cube.",
+    "output": "[\n  {\n    \"instruction\": \"Initiate movement to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"acquire the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"journey to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"settle the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Approach room1, hoist the red cube, then head to room2 and drop off the red cube.",
+    "output": "[\n  {\n    \"instruction\": \"Approach room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"hoist the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"head to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"drop off the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Can you get to room1 and take the red cube, then move onto room2 and position the red cube?",
+    "output": "[\n  {\n    \"instruction\": \"get to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"take the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"move onto room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"position the red cube\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to reach room1, extract the red cube, then proceed to room2 and place the red cube accordingly.",
+    "output": "[\n  {\n    \"instruction\": \"reach room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"extract the red cube\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"proceed to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the red cube accordingly\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Proceed to room5 and pick up the green sphere, then move to room7 and place it.",
+    "output": "[\n  {\n    \"instruction\": \"Proceed to room5\",\n    \"action\": \"nav\",\n    \"target\": \"room5\",\n    \"location\": \"room5\"\n  },\n  {\n    \"instruction\": \"pick up the green sphere\",\n    \"action\": \"pick\",\n    \"target\": \"green sphere\",\n    \"location\": \"room5\"\n  },\n  {\n    \"instruction\": \"move to room7\",\n    \"action\": \"nav\",\n    \"target\": \"room7\",\n    \"location\": \"room7\"\n  },\n  {\n    \"instruction\": \"place it\",\n    \"action\": \"place\",\n    \"target\": \"green sphere\",\n    \"location\": \"room7\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Navigate to room3 to retrieve the yellow cylinder, afterwards go to room1 and set it down.",
+    "output": "[\n  {\n    \"instruction\": \"Navigate to room3\",\n    \"action\": \"nav\",\n    \"target\": \"room3\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"retrieve the yellow cylinder\",\n    \"action\": \"pick\",\n    \"target\": \"yellow cylinder\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"go to room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"yellow cylinder\",\n    \"location\": \"room1\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your task is to enter room6, grab the purple pyramid, then head to room4 and deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"enter room6\",\n    \"action\": \"nav\",\n    \"target\": \"room6\",\n    \"location\": \"room6\"\n  },\n  {\n    \"instruction\": \"grab the purple pyramid\",\n    \"action\": \"pick\",\n    \"target\": \"purple pyramid\",\n    \"location\": \"room6\"\n  },\n  {\n    \"instruction\": \"head to room4\",\n    \"action\": \"nav\",\n    \"target\": \"room4\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"purple pyramid\",\n    \"location\": \"room4\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Initiate movement to room2, acquire the blue cone, subsequently transfer to room8, and release the object.",
+    "output": "[\n  {\n    \"instruction\": \"Initiate movement to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"acquire the blue cone\",\n    \"action\": \"pick\",\n    \"target\": \"blue cone\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"subsequently transfer to room8\",\n    \"action\": \"nav\",\n    \"target\": \"room8\",\n    \"location\": \"room8\"\n  },\n  {\n    \"instruction\": \"release the object\",\n    \"action\": \"place\",\n    \"target\": \"blue cone\",\n    \"location\": \"room8\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Can you access room9, take the orange cube, proceed to room0, and then put it in place?",
+    "output": "[\n  {\n    \"instruction\": \"access room9\",\n    \"action\": \"nav\",\n    \"target\": \"room9\",\n    \"location\": \"room9\"\n  },\n  {\n    \"instruction\": \"take the orange cube\",\n    \"action\": \"pick\",\n    \"target\": \"orange cube\",\n    \"location\": \"room9\"\n  },\n  {\n    \"instruction\": \"proceed to room0\",\n    \"action\": \"nav\",\n    \"target\": \"room0\",\n    \"location\": \"room0\"\n  },\n  {\n    \"instruction\": \"put it in place\",\n    \"action\": \"place\",\n    \"target\": \"orange cube\",\n    \"location\": \"room0\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, visit room1 and pick up the black sphere; second, make your way to room3 to place it.",
+    "output": "[\n  {\n    \"instruction\": \"visit room1\",\n    \"action\": \"nav\",\n    \"target\": \"room1\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"pick up the black sphere\",\n    \"action\": \"pick\",\n    \"target\": \"black sphere\",\n    \"location\": \"room1\"\n  },\n  {\n    \"instruction\": \"make your way to room3\",\n    \"action\": \"nav\",\n    \"target\": \"room3\",\n    \"location\": \"room3\"\n  },\n  {\n    \"instruction\": \"place it\",\n    \"action\": \"place\",\n    \"target\": \"black sphere\",\n    \"location\": \"room3\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move to room0 to get the white cylinder, then travel to room5 and leave it there.",
+    "output": "[\n  {\n    \"instruction\": \"Move to room0\",\n    \"action\": \"nav\",\n    \"target\": \"room0\",\n    \"location\": \"room0\"\n  },\n  {\n    \"instruction\": \"get the white cylinder\",\n    \"action\": \"pick\",\n    \"target\": \"white cylinder\",\n    \"location\": \"room0\"\n  },\n  {\n    \"instruction\": \"travel to room5\",\n    \"action\": \"nav\",\n    \"target\": \"room5\",\n    \"location\": \"room5\"\n  },\n  {\n    \"instruction\": \"leave it there\",\n    \"action\": \"place\",\n    \"target\": \"white cylinder\",\n    \"location\": \"room5\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to enter room4, select the pink pyramid, then go to room9, and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"enter room4\",\n    \"action\": \"nav\",\n    \"target\": \"room4\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"select the pink pyramid\",\n    \"action\": \"pick\",\n    \"target\": \"pink pyramid\",\n    \"location\": \"room4\"\n  },\n  {\n    \"instruction\": \"go to room9\",\n    \"action\": \"nav\",\n    \"target\": \"room9\",\n    \"location\": \"room9\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"pink pyramid\",\n    \"location\": \"room9\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Commence by going to room7 to seize the brown cone, after which move to room6 for its placement.",
+    "output": "[\n  {\n    \"instruction\": \"Commence by going to room7\",\n    \"action\": \"nav\",\n    \"target\": \"room7\",\n    \"location\": \"room7\"\n  },\n  {\n    \"instruction\": \"seize the brown cone\",\n    \"action\": \"pick\",\n    \"target\": \"brown cone\",\n    \"location\": \"room7\"\n  },\n  {\n    \"instruction\": \"move to room6\",\n    \"action\": \"nav\",\n    \"target\": \"room6\",\n    \"location\": \"room6\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"brown cone\",\n    \"location\": \"room6\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Find the gray cube in room8, pick it up, go to room2, and place the cube there.",
+    "output": "[\n  {\n    \"instruction\": \"Find the gray cube in room8\",\n    \"action\": \"nav\",\n    \"target\": \"room8\",\n    \"location\": \"room8\"\n  },\n  {\n    \"instruction\": \"pick it up\",\n    \"action\": \"pick\",\n    \"target\": \"gray cube\",\n    \"location\": \"room8\"\n  },\n  {\n    \"instruction\": \"go to room2\",\n    \"action\": \"nav\",\n    \"target\": \"room2\",\n    \"location\": \"room2\"\n  },\n  {\n    \"instruction\": \"place the cube there\",\n    \"action\": \"place\",\n    \"target\": \"gray cube\",\n    \"location\": \"room2\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Collect the red cube from room10, then head over to room12 and set it down.",
+    "output": "[\n  {\n    \"instruction\": \"Collect the red cube from room10\",\n    \"action\": \"pick\",\n    \"target\": \"red cube\",\n    \"location\": \"room10\"\n  },\n  {\n    \"instruction\": \"head over to room12\",\n    \"action\": \"nav\",\n    \"target\": \"room12\",\n    \"location\": \"room12\"\n  },\n  {\n    \"instruction\": \"set it down\",\n    \"action\": \"place\",\n    \"target\": \"red cube\",\n    \"location\": \"room12\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Retrieve the blue cylinder from room14, then navigate to room11 and put it in position",
+    "output": "[\n  {\n    \"instruction\": \"Retrieve the blue cylinder from room14\",\n    \"action\": \"pick\",\n    \"target\": \"blue cylinder\",\n    \"location\": \"room14\"\n  },\n  {\n    \"instruction\": \"navigate to room11\",\n    \"action\": \"nav\",\n    \"target\": \"room11\",\n    \"location\": \"room11\"\n  },\n  {\n    \"instruction\": \"put it in position\",\n    \"action\": \"place\",\n    \"target\": \"blue cylinder\",\n    \"location\": \"room11\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Your mission: gather the green sphere from room13, proceed to room15, and deposit it.",
+    "output": "[\n  {\n    \"instruction\": \"gather the green sphere from room13\",\n    \"action\": \"pick\",\n    \"target\": \"green sphere\",\n    \"location\": \"room13\"\n  },\n  {\n    \"instruction\": \"proceed to room15\",\n    \"action\": \"nav\",\n    \"target\": \"room15\",\n    \"location\": \"room15\"\n  },\n  {\n    \"instruction\": \"deposit it\",\n    \"action\": \"place\",\n    \"target\": \"green sphere\",\n    \"location\": \"room15\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Acquire the yellow pyramid from room16, then travel to room18 and release the item.",
+    "output": "[\n  {\n    \"instruction\": \"Acquire the yellow pyramid from room16\",\n    \"action\": \"pick\",\n    \"target\": \"yellow pyramid\",\n    \"location\": \"room16\"\n  },\n  {\n    \"instruction\": \"travel to room18\",\n    \"action\": \"nav\",\n    \"target\": \"room18\",\n    \"location\": \"room18\"\n  },\n  {\n    \"instruction\": \"release the item\",\n    \"action\": \"place\",\n    \"target\": \"yellow pyramid\",\n    \"location\": \"room18\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Find the purple cone in room17 and take it, then access room19 and place it there.",
+    "output": "[\n  {\n    \"instruction\": \"Find the purple cone in room17\",\n    \"action\": \"nav\",\n    \"target\": \"room17\",\n    \"location\": \"room17\"\n  },\n  {\n    \"instruction\": \"take it\",\n    \"action\": \"pick\",\n    \"target\": \"purple cone\",\n    \"location\": \"room17\"\n  },\n  {\n    \"instruction\": \"access room19\",\n    \"action\": \"nav\",\n    \"target\": \"room19\",\n    \"location\": \"room19\"\n  },\n  {\n    \"instruction\": \"place it there\",\n    \"action\": \"place\",\n    \"target\": \"purple cone\",\n    \"location\": \"room19\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "First, get the orange cube from room20; second, advance to room22 and leave it behind.",
+    "output": "[\n  {\n    \"instruction\": \"get the orange cube from room20\",\n    \"action\": \"pick\",\n    \"target\": \"orange cube\",\n    \"location\": \"room20\"\n  },\n  {\n    \"instruction\": \"advance to room22\",\n    \"action\": \"nav\",\n    \"target\": \"room22\",\n    \"location\": \"room22\"\n  },\n  {\n    \"instruction\": \"leave it behind\",\n    \"action\": \"place\",\n    \"target\": \"orange cube\",\n    \"location\": \"room22\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Collect the white sphere present in room21, then transition to room23 and put it in that spot",
+    "output": "[\n  {\n    \"instruction\": \"Collect the white sphere present in room21\",\n    \"action\": \"pick\",\n    \"target\": \"white sphere\",\n    \"location\": \"room21\"\n  },\n  {\n    \"instruction\": \"transition to room23\",\n    \"action\": \"nav\",\n    \"target\": \"room23\",\n    \"location\": \"room23\"\n  },\n  {\n    \"instruction\": \"put it in that spot\",\n    \"action\": \"place\",\n    \"target\": \"white sphere\",\n    \"location\": \"room23\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "Move to room25 to secure the black cylinder, then move towards room24 and drop it off.",
+    "output": "[\n  {\n    \"instruction\": \"Move to room25\",\n    \"action\": \"nav\",\n    \"target\": \"room25\",\n    \"location\": \"room25\"\n  },\n  {\n    \"instruction\": \"secure the black cylinder\",\n    \"action\": \"pick\",\n    \"target\": \"black cylinder\",\n    \"location\": \"room25\"\n  },\n  {\n    \"instruction\": \"move towards room24\",\n    \"action\": \"nav\",\n    \"target\": \"room24\",\n    \"location\": \"room24\"\n  },\n  {\n    \"instruction\": \"drop it off\",\n    \"action\": \"place\",\n    \"target\": \"black cylinder\",\n    \"location\": \"room24\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "I need you to grab the pink pyramid from room26, then move into room28 for its placement",
+    "output": "[\n  {\n    \"instruction\": \"grab the pink pyramid from room26\",\n    \"action\": \"pick\",\n    \"target\": \"pink pyramid\",\n    \"location\": \"room26\"\n  },\n  {\n    \"instruction\": \"move into room28\",\n    \"action\": \"nav\",\n    \"target\": \"room28\",\n    \"location\": \"room28\"\n  },\n  {\n    \"instruction\": \"for its placement\",\n    \"action\": \"place\",\n    \"target\": \"pink pyramid\",\n    \"location\": \"room28\"\n  }\n]"
+  },
+  {
+    "instruction": "Convert the following navigation instruction into a structured JSON format with specific actions:",
+    "input": "From room27, pick up the brown cone, then journey to room29 and settle it there.",
+    "output": "[\n  {\n    \"instruction\": \"From room27, pick up the brown cone\",\n    \"action\": \"pick\",\n    \"target\": \"brown cone\",\n    \"location\": \"room27\"\n  },\n  {\n    \"instruction\": \"journey to room29\",\n    \"action\": \"nav\",\n    \"target\": \"room29\",\n    \"location\": \"room29\"\n  },\n  {\n    \"instruction\": \"settle it there\",\n    \"action\": \"place\",\n    \"target\": \"brown cone\",\n    \"location\": \"room29\"\n  }\n]"
+  }
+]
